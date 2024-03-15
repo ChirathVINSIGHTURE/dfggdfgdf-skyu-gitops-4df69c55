@@ -3,8 +3,8 @@ kind: Namespace
 metadata:
   name: test-env-trigger-creation-project-prod
   labels:
-    environmentId: env_dd74d060-4240-44e1-8013-ad8197b3fe82
-    projectId: project_ac560514-9735-46e8-b4c6-8578a7a00658
+    environmentId: env_1570badf-4ced-4ce4-a308-dec37673227f
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
     projectName: test-env-trigger-creation-project
     environmentName: prod
     organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
