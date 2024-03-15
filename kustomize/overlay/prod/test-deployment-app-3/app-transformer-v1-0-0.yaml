@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: test-deployment-app-3-main
+      imagePullPolicy: Always
+      imageRegistry: docker.io/hellow/test-deployment-app-3
+      imagePullSecretName: imagepull-docker
+      credentialId: credential_4fde8f53-56a5-469c-ba7d-3b8829428f8c
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: test-deployment-app-3
+    version: v1.0.0
+    applicationId: app_3064443a-fe1c-489b-9a48-65efdc5e0d74
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+    environmentId: env_1570badf-4ced-4ce4-a308-dec37673227f
+    environmentName: prod
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: test-deployment-app-3
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: test-env-trigger-creation-project-prod
