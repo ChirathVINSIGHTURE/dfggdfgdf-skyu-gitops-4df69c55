@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-env-trigger-creation-project-staging
+  labels:
+    environmentId: env_99b84b14-ca6f-4902-b450-f5b47b889be7
+    projectId: project_ac560514-9735-46e8-b4c6-8578a7a00658
+    projectName: test-env-trigger-creation-project
+    environmentName: staging
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
