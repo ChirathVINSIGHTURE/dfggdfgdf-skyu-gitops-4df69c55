@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: {}
+  name: test-deploy-app-3-v1-0-0
+  labels:
+    app: test-deploy-app-3-v1-0-0
+    applicationId: app_225cef7e-35e3-4614-a1c6-ebe6b3dbc46b
+    version: v1.0.0
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: test-deploy-app-3-v1-0-0
