@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  annotations:
+    reloader.stakater.com/auto: 'true'
+  labels:
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+    applicationId: app_a66f0c8b-ff12-45a5-b0a7-2bfbfba0bcdc
+    version: v1.0.0
+  name: cronjob-test-multiple-env-v1-0-0
+spec:
+  successfulJobsHistoryLimit: 10
+  jobTemplate:
+    metadata:
+      annotations: {}
+      labels:
+        organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+        projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+        applicationId: app_a66f0c8b-ff12-45a5-b0a7-2bfbfba0bcdc
+        version: v1.0.0
+    spec:
+      template:
+        metadata:
+          labels:
+            organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+            projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+            applicationId: app_a66f0c8b-ff12-45a5-b0a7-2bfbfba0bcdc
+            version: v1.0.0

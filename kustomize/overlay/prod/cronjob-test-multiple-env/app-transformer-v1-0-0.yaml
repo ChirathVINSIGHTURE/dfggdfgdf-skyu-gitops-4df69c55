@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: cronjob-test-multiple-env-main
+      imagePullPolicy: Always
+      imageRegistry: docker.io/hellow/cronjob-test-multiple-env
+      imagePullSecretName: imagepull-docker
+      credentialId: credential_4fde8f53-56a5-469c-ba7d-3b8829428f8c
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 86400
+  labels:
+    app: cronjob-test-multiple-env
+    version: v1.0.0
+    applicationId: app_a66f0c8b-ff12-45a5-b0a7-2bfbfba0bcdc
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+    environmentId: env_1570badf-4ced-4ce4-a308-dec37673227f
+    environmentName: prod
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: CronJob
+  name: cronjob-test-multiple-env
+  cronTab: '* * * * *'
+  version: v1.0.0
+  namespace: test-env-trigger-creation-project-prod
