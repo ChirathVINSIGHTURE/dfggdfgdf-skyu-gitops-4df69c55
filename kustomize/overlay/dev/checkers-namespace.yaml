@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: checkers
+  labels:
+    environmentId: env_96480b05-9b5f-4843-9398-ed4d735b21aa
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+    projectName: test-env-trigger-creation-project
+    environmentName: dev
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
