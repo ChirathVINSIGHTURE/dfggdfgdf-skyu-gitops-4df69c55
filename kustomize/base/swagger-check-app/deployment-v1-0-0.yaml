@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swagger-check-app-v1-0-0
+  labels:
+    app: swagger-check-app-v1-0-0
+    applicationId: app_336f32a5-0773-48f7-be4f-1d389908e3e9
+    version: v1.0.0
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+  annotations:
+    reloader.stakater.com/auto: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: swagger-check-app-v1-0-0
+  template:
+    metadata:
+      labels:
+        app: swagger-check-app-v1-0-0
+        applicationId: app_336f32a5-0773-48f7-be4f-1d389908e3e9
+        version: v1.0.0
+        organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
+        projectId: project_3010652f-81eb-435c-b157-074bbab4e211
