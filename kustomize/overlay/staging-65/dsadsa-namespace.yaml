@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dsadsa
+  labels:
+    environmentId: env_a955ad60-0b29-43d4-a83e-f68115ed5718
+    projectId: project_3010652f-81eb-435c-b157-074bbab4e211
+    projectName: test-env-trigger-creation-project
+    environmentName: staging-65
+    organizationId: org_12ab5a69-48a2-42d7-ad36-d59a2bca4805
